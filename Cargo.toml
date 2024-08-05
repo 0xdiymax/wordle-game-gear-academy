@@ -1,0 +1,29 @@
+[workspace.package]
+version = "0.1.0"
+edition = "2021"
+publish = false
+
+[package]
+name = "wordle-game-gear-academy"
+version.workspace = true
+edition.workspace = true
+publish.workspace = true
+
+[workspace]
+resolver = "2"
+members = [
+  "wordle",
+  "game-session",
+]
+
+
+[workspace.dependencies]
+gstd = "1.4.2"
+gmeta = "1.4.2"
+gear-wasm-builder = "1.4.2"
+gtest = "1.4.2"
+parity-scale-codec = { version = "3", default-features = false }
+scale-info = { version = "2", default-features = false }
+
+wordle-io.path = "wordle/io"
+game-session-io.path = "game-session/io"
